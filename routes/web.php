@@ -17,8 +17,9 @@ Route::get('/', function () {
 
 Auth::routes();
 
-Route::get('/home', 'HomeController@index');
-
-Auth::routes();
-
-Route::get('/home', 'HomeController@index');
+Route::get('/', 'TelegramController@getSendMessage');
+Route::get('get-updates', 'TelegramController@getUpdates');
+Route::get('send',  'TelegramController@getSendMessage');
+Route::post('send', 'TelegramController@postSendMessage');
+Route::get('bot-config', 'ConfigController@index')->name('bot-config');;
+Route::post('update-config', 'ConfigController@updateConfig');

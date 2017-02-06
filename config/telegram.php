@@ -13,7 +13,8 @@ return [
     | https://core.telegram.org/bots#botfather
     |
     */
-    'bot_token' => env('TELEGRAM_BOT_TOKEN', '286420653:AAHDWIlXcup_KWCQkuZF5SsXrXPfITp7QMI'),
+
+    'bot_token' => env('TELEGRAM_BOT_TOKEN', '252658748:AAHJ_W51VYVF-MNyVyHt-2iDnxO-OjHX-1s'),
 
     /*
     |--------------------------------------------------------------------------
@@ -26,6 +27,7 @@ return [
     | Possible Values: (Boolean) "true" OR "false"
     |
     */
+    
     'async_requests' => env('TELEGRAM_ASYNC_REQUESTS', false),
 
     /*
@@ -39,6 +41,7 @@ return [
     | Default: GuzzlePHP
     |
     */
+
     'http_client_handler' => null,
 
     /*
@@ -55,7 +58,9 @@ return [
     | will respond with a list of available commands and description.
     |
     */
+    
     'commands' => [
         Telegram\Bot\Commands\HelpCommand::class,
+        Commands\StartCommand::class,
     ],
 ];
